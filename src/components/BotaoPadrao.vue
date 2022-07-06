@@ -1,5 +1,5 @@
 <template>
-    <button class="button" @click="" :disabled="onDisabled">
+    <button class="button" :disabled="onDisabled">
         <span class="icon">
             <i :class="icone"></i>
         </span>
@@ -13,9 +13,6 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: 'BotaoPadrao',
-    emits: [
-        'onClick'
-    ],
 
     props: {
         onDisabled: {

@@ -1,9 +1,9 @@
 <template>
     <div class="is-flex is-align-items-center is-justify-content-space-between">
         <Cronometro :tempoEmSegundos="tempoEmSegundos" />
-        <BotaoPadrao @onClick="iniciar" icone="fas fa-play"
+        <BotaoPadrao @click="iniciar" icone="fas fa-play"
             :onDisabled="cronometroRodando" texto="Play" />
-        <BotaoPadrao @onClick="finalizar" icone="fas fa-stop"
+        <BotaoPadrao @click="finalizar" icone="fas fa-stop"
             :onDisabled="!cronometroRodando" texto="Stop" />
         <!-- <button class="button" @click="iniciar" :disabled="cronometroRodando">
             <span class="icon">
