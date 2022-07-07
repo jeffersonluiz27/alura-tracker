@@ -4,7 +4,12 @@
       <img src="../assets/logo.png" alt="" />
     </h1>
     <div class="has-text-centered">
-      <button class="button" @click="alterarTema">{{ textoBotao }}</button>
+        
+      <button class="button" @click="alterarTema">
+      <div v-html="iconeBotao"></div>
+      <div class="buttonText">{{textoBotao}}</div>
+      </button>
+      
     </div>
     <nav class="panel mt-5">
       <ul>
@@ -39,9 +44,15 @@ export default defineComponent({
   computed: {
     textoBotao() {
       if (this.modoEscuroAtivo) {
-        return "Desativar modo escuro";
+        return 'Dark Theme OFF';
       }
-      return "Ativar modo escuro";
+      return 'Dark Theme ON';
+    },
+    iconeBotao() {
+      if (this.modoEscuroAtivo) {
+        return '<i class="fas fa-sun"></i>';
+      }
+      return '<i class="fas fa-moon"></i>';
     },
   },
   methods: {
@@ -76,6 +87,21 @@ header {
 
 .link.router-link-active {
   color: #faf0ca;
+}
+
+.button{
+ background-color: transparent;
+ border: none;
+ box-sizing: border-box;
+ color: #fff;
+}
+
+.button:focus {
+  box-shadow: none;
+}
+
+.buttonText{
+    margin-left: 8px;
 }
 
 @media only screen and (max-width: 768px) {
