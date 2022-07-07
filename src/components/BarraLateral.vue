@@ -44,15 +44,15 @@ export default defineComponent({
   computed: {
     textoBotao() {
       if (this.modoEscuroAtivo) {
-        return 'Dark Theme OFF';
+        return 'Dark ON';
       }
-      return 'Dark Theme ON';
+      return 'Dark OFF';
     },
     iconeBotao() {
       if (this.modoEscuroAtivo) {
-        return '<i class="fas fa-sun"></i>';
+        return '<i class="fas fa-moon"></i>';
       }
-      return '<i class="fas fa-moon"></i>';
+      return '<i class="fas fa-sun"></i>';
     },
   },
   methods: {
@@ -94,6 +94,7 @@ header {
  border: none;
  box-sizing: border-box;
  color: #fff;
+ flex-direction: column;
 }
 
 .button:focus {
