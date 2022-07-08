@@ -1,6 +1,6 @@
 <template>
     <section>
-        <strong class="display">{{ tempoDecorrido }}</strong>
+        <strong :class="cor" >{{ tempoDecorrido }}</strong>
     </section>
 </template>
 
@@ -9,11 +9,13 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
     name: 'CCronometro',
-
     props: {
         tempoEmSegundos: {
             type: Number,
             default: 0,
+        },
+        cor:{
+            type: String,
         }
     },
 
@@ -25,8 +27,12 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
 .display {
     color: var(--texto-primario);
+}
+
+.mainDisplay{
+    color: var(--texto-secundario);
 }
 </style>
