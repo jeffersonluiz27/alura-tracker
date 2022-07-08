@@ -1,4 +1,4 @@
-import { INotificacao, TipoNotificacao } from "@/interfaces/INotificacao";
+import { INotificacao } from "@/interfaces/INotificacao";
 import IProjeto from "@/interfaces/IProjeto";
 import { InjectionKey } from "vue";
 import { uuid } from "vue-uuid";
