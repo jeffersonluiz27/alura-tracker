@@ -42,12 +42,12 @@ export default defineComponent({
     };
   },
   computed: {
-    textoBotao() {
+    /* textoBotao() {
       if (this.modoEscuroAtivo) {
         return 'Dark ON';
       }
       return 'Dark OFF';
-    },
+    }, */
     iconeBotao() {
       if (this.modoEscuroAtivo) {
         return '<i class="fas fa-moon"></i>';
