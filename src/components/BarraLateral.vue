@@ -7,7 +7,7 @@
         
       <button class="button" @click="alterarTema">
       <div v-html="iconeBotao"></div>
-      <div class="buttonText">{{textoBotao}}</div>
+      <div class="buttonText"></div>
       </button>
       
     </div>
